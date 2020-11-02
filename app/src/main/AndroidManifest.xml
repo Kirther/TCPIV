@@ -9,15 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Songbird">
-        <activity android:name=".GameMainMenu"
+
+        <activity android:name=".CreditsScreen"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.noActionBar"></activity>
+            android:theme="@style/AppTheme.noActionBar" />
+
+        <activity
+            android:name=".GameMainMenu"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.noActionBar" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.noActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

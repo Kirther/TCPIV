@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreditsScreen">
+
+    <ImageView
+        android:id="@+id/creditsScreenBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/forestbackground" />
+
+    <ImageView
+        android:id="@+id/creditsHolder"
+        android:layout_width="535dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/creditsScreenBackground"
+        app:layout_constraintEnd_toEndOf="@+id/creditsScreenBackground"
+        app:layout_constraintStart_toStartOf="@+id/creditsScreenBackground"
+        app:layout_constraintTop_toTopOf="@+id/creditsScreenBackground"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/credits_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Credits"
+        android:textSize="40dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/creditsHolder"
+        app:layout_constraintStart_toStartOf="@+id/creditsHolder"
+        app:layout_constraintTop_toTopOf="@+id/creditsHolder" />
+
+    <TextView
+        android:id="@+id/gabriel_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Gabriel Fonini"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/credits_Text" />
+
+    <TextView
+        android:id="@+id/fernanda_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Fernanda Coelho"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/gabriel_Text" />
+
+    <TextView
+        android:id="@+id/felipe_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Felipe Augusto"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/fernanda_Text" />
+
+    <TextView
+        android:id="@+id/hugo_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Hugo Duarte"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/felipe_Text" />
+
+    <TextView
+        android:id="@+id/lorena_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Lorena Goes"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/hugo_Text" />
+
+    <TextView
+        android:id="@+id/programador_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Programador"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/credits_Text" />
+
+    <TextView
+        android:id="@+id/artista1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Artista"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/programador_text" />
+
+    <TextView
+        android:id="@+id/soundD_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Sound Designer"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/artista1_text" />
+
+    <TextView
+        android:id="@+id/gameD_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Game Designer"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/soundD_text" />
+
+    <TextView
+        android:id="@+id/artista2_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Artista"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/creditsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/gameD_Text" />
+
+    <Button
+        android:id="@+id/credits_returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/abc_vector_test"
+        android:scaleX=".8"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/creditsScreenBackground"
+        app:layout_constraintTop_toTopOf="@+id/creditsScreenBackground" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

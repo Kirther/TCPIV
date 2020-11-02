@@ -3,6 +3,7 @@ package com.example.songbird;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -61,10 +62,15 @@ public class GameMainMenu extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                NotYetImplementedMessage();
+                OpenCreditsScreen();
             }
         });
 
+    }
+
+    private void OpenCreditsScreen() {
+        Intent gameScreen = new Intent (this, CreditsScreen.class);
+        startActivity(gameScreen);
     }
 
     private void NotYetImplementedMessage() {
