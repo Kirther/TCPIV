@@ -2,13 +2,20 @@ package com.example.songbird;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class GameMainMenu extends AppCompatActivity {
+
+    Button menu_startButton;
+    Button menu_shopButton;
+    Button menu_settingsButton;
+    Button menu_creditsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,5 +28,48 @@ public class GameMainMenu extends AppCompatActivity {
 
         setContentView(R.layout.activity_game_main_menu);
 
+        menu_startButton = findViewById(R.id.startButton);
+        menu_shopButton = findViewById(R.id.shopButton);
+        menu_settingsButton = findViewById(R.id.settingsButton);
+        menu_creditsButton = findViewById(R.id.creditsButton);
+
+        menu_startButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                NotYetImplementedMessage();
+            }
+        });
+
+        menu_shopButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                NotYetImplementedMessage();
+            }
+        });
+
+        menu_settingsButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                NotYetImplementedMessage();
+            }
+        });
+
+        menu_creditsButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                NotYetImplementedMessage();
+            }
+        });
+
+    }
+
+    private void NotYetImplementedMessage() {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        Toast.makeText(context, "Button not yet implemented", duration).show();
     }
 }
