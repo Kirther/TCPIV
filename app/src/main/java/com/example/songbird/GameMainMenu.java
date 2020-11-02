@@ -3,8 +3,10 @@ package com.example.songbird;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 public class GameMainMenu extends AppCompatActivity {
 
@@ -18,5 +20,6 @@ public class GameMainMenu extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_game_main_menu);
+
     }
 }
