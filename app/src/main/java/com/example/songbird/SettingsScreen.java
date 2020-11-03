@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,7 +28,7 @@ public class SettingsScreen extends AppCompatActivity {
     Spinner language_Select;
     String [] languages = new String[] {"Português", "English"};
 
-    String selected_Language;
+    public static String selected_Language;
 
     public static final String CREDITS_PREFS = "sharedPrefs";
     public static final String LANGUAGE_CHOICE = "language_choice";
@@ -102,21 +103,17 @@ public class SettingsScreen extends AppCompatActivity {
     }
 
     private void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(CREDITS_PREFS, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putString(LANGUAGE_CHOICE, selected_Language);
         editor.putInt("spinner_Position", language_Select.getSelectedItemPosition());
 
-        /* Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast.makeText(context, String.valueOf(language_Select.getSelectedItemPosition()), duration).show(); */
-
         editor.apply();
     }
 
     private void LoadData(){
-        SharedPreferences sharedPreferences = getSharedPreferences(CREDITS_PREFS, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         selected_Language = sharedPreferences.getString(LANGUAGE_CHOICE, "Portuguese");
         index = sharedPreferences.getInt("spinner_Position", 0);
