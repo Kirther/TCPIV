@@ -21,12 +21,10 @@ public class GameMainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         //Remove title bar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_game_main_menu);
 
         menu_startButton = findViewById(R.id.startButton);
@@ -54,7 +52,7 @@ public class GameMainMenu extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                NotYetImplementedMessage();
+                OpenSettingsScreen();
             }
         });
 
@@ -66,6 +64,11 @@ public class GameMainMenu extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void OpenSettingsScreen() {
+        Intent gameScreen = new Intent (this, SettingsScreen.class);
+        startActivity(gameScreen);
     }
 
     private void OpenCreditsScreen() {

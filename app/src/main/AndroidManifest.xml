@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Songbird">
 
-        <activity android:name=".CreditsScreen"
+        <activity android:name=".SettingsScreen"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.noActionBar" />
+
+        <activity
+            android:name=".CreditsScreen"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.noActionBar" />
 
@@ -29,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsScreen">
+
+
+    <ImageView
+        android:id="@+id/settingsBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/simple_background1" />
+
+    <ImageView
+        android:id="@+id/settings_itemsHolder"
+        android:layout_width="500sp"
+        android:layout_height="300sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/settings_Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Settings"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@+id/settings_itemsHolder"
+        app:layout_constraintStart_toStartOf="@+id/settings_itemsHolder"
+        app:layout_constraintTop_toTopOf="@+id/settings_itemsHolder" />
+
+    <Button
+        android:id="@+id/settings_returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/abc_vector_test"
+        android:scaleX=".8"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/settingsBackground"
+        app:layout_constraintTop_toTopOf="@+id/settingsBackground" />
+
+    <TextView
+        android:id="@+id/settings_Sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Música"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/settings_itemsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/settings_Settings" />
+
+    <TextView
+        android:id="@+id/settings_SFX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="SFX"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/settings_itemsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/settings_Sound" />
+
+    <TextView
+        android:id="@+id/settings_Language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Língua"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/settings_itemsHolder"
+        app:layout_constraintTop_toBottomOf="@+id/settings_SFX" />
+
+    <Spinner
+        android:id="@+id/settings_LanguageSelect"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/settings_itemsHolder"
+        app:layout_constraintTop_toTopOf="@+id/settings_Language" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
